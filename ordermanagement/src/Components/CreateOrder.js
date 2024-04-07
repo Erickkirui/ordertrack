@@ -79,14 +79,16 @@ function CreateOrder() {
           <input type="text" placeholder="Phone Number" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} required />
           
           <input type="text" placeholder="Product Name" value={productName} onChange={(e) => setProductName(e.target.value)} required />
+          
           <select value={priority} onChange={(e) => setPriority(e.target.value)} required>
             <option value="">Select Priority</option>
             <option value="High">High</option>
             <option value="Medium">Medium</option>
             <option value="Low">Low</option>
           </select>
+
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit" className='creat-order-button'>Submit order</button>
       </form>
       {message && <p>{message}</p>}
     </div>

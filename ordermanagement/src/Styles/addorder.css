@@ -21,3 +21,11 @@ select {
     width: 85%;
     margin-bottom: 10px;
 }
+.creat-order-button{
+    background: var(--primary);
+    width: 85% ;
+    color : white;
+    padding: 10px;
+    border : none;
+
+}

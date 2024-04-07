@@ -1,8 +1,11 @@
 import React from 'react'
+import ListAllOrder from '../Components/ListAllOrder'
 
 function OrderListings() {
   return (
-    <div>OrderListings</div>
+    <div>
+      <ListAllOrder />
+    </div>
   )
 }
 
