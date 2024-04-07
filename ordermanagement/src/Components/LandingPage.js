@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 function LandingPage() {
   return (
     <div className='home-buttons'>
-      <Link>
+      <Link to="/addorder" >
         <button className='add-orders'>
           Add Order 
         </button>

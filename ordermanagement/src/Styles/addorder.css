@@ -1,0 +1,23 @@
+.add-order-container{
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    margin-top: 5%;
+}
+input{
+    border: none;
+    border-bottom: 1px solid var(--primary); /* You can adjust the color and thickness as needed */
+    outline: none;
+    margin-bottom: 20px;
+  }
+
+  input:focus{
+    border-bottom: 2px solid green ;
+  }
+
+select {
+    padding: 10px;
+    width: 85%;
+    margin-bottom: 10px;
+}
