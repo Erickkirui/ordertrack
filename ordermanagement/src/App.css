@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Poppins-Regular';
+  src: url('../public/Poppins-Regular.ttf');
+}
+
+:root {
+  --static: #ffffff;
+  --primary: #000000;
+  --secondary: #213343;
+  --background :#F5f9fd;
+}
+
+*{
+  font-family: 'Poppins-Regular';
+}
