@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import '../Styles/orderlist.css'
-import { Link } from 'react-router-dom';
 
-function ListAllOrder() {
+function ListHighpriority() {
   const [orders, setOrders] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(10);
@@ -11,7 +11,7 @@ function ListAllOrder() {
 
   const fetchOrders = async () => {
     try {
-      const response = await axios.get(`/api/orders`);
+      const response = await axios.get(`/api/highpriority`);
       setOrders(response.data.orders);
     } catch (error) {
       console.error('Error fetching orders:', error);
@@ -57,11 +57,10 @@ function ListAllOrder() {
 
   return (
     <div className='orderlist-container'>
-      <h2>All Orders</h2>
+      <h2>High priority orders</h2>
       <div className='quick-navigation'>
       <Link to="/"><p>Home | </p> </Link> <Link to ="/orderselection"><p>Orders | </p></Link> <Link to ="/addorder"><p>Add Orders</p></Link>
       </div>
-     
       
       <table className="order-table">
         <thead>
@@ -92,7 +91,7 @@ function ListAllOrder() {
         </tbody>
       </table>
 
-      <button className="delete-button" onClick={handleDelete}>Delete Selected</button>
+      <button className="delete-button"  onClick={handleDelete}>Delete Selected</button>
 
       <div className="pagination">
         <p>Page {currentPage} of {totalPages}</p>
@@ -107,4 +106,4 @@ function ListAllOrder() {
   );
 }
 
-export default ListAllOrder;
+export default ListHighpriority;

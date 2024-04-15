@@ -17,6 +17,7 @@ function CreateOrder() {
     try {
       const response = await axios.post('/api/neworder', {
         customer_name: customerName,
+        id: id,
         phone_number: phoneNumber,
         priority: priority.toLowerCase(),
         product_name: productName

@@ -13,3 +13,33 @@
 *{
   font-family: 'Poppins-Regular';
 }
+.delete-button{
+  background-color: rgb(230, 19, 19);
+  padding: 5px;
+  margin-top: 16px;
+  border: solid 1px #ccc;
+  color: var(--static);
+  border-radius: 3px;
+}
+
+.quick-navigation{
+  display: flex;
+  gap: 5px;
+  
+
+}
+.quick-navigation a{
+  text-decoration: none;
+  color: var(--primary);
+  opacity: 50%;
+}
+.quick-navigation a:hover{
+  color: var(--primary);
+}
+.orderlist-container{
+ width: 95%;
+ margin-left: auto;
+ margin-right: auto;
+  
+
+}

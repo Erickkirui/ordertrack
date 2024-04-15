@@ -3,7 +3,7 @@
     display: grid;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 80%;
    margin-top: 20%;
     
 }
@@ -11,13 +11,17 @@
     display : grid;
     gap : 1rem;
 }
+.home-buttons h2{
+    text-align: center;
+    font-size: 1.4rem;
+    letter-spacing: 1.1px;
+}
 .home-buttons button{
     width: 100%;
     padding: 10px;
-    border-radius: 6px;
+    border-radius: 3px;
     border: 1px solid;
-    font-size: 1.5rem;
-   letter-spacing: 1.14px;
+    letter-spacing: 1.14px;
 }
 
 .add-orders{
