@@ -2,8 +2,41 @@ import re
 from flask_restful import Resource
 from flask import request
 from Server.Models.orders import Orders
+from datetime import datetime, date
+
 from app import db
 
+
+class ViewOrdersByPriority(Resource):
+    def get(self, priority):
+        # Filter orders by priority
+        orders = Orders.query.filter_by(priority=priority).all()
+        
+        if not orders:
+            return {'message': f'No {priority} priority orders'}, 404
+        
+        # Convert orders to JSON format
+        order_list = [{'id': order.id, 
+                       'customer_name': order.customer_name, 
+                       'phone_number': order.phone_number,
+                       'priority': order.priority, 
+                       'product_name': order.product_name,
+                       'created_at': order.created_at.strftime("%Y-%m-%d %H:%M:%S")} for order in orders]
+        
+        return {'orders': order_list}, 200
+
+class ViewHighPriorityOrders(ViewOrdersByPriority):
+    def get(self):
+        return super().get('high')
+
+class ViewMediumPriorityOrders(ViewOrdersByPriority):
+    def get(self):
+        return super().get('medium')
+
+class ViewLowPriorityOrders(ViewOrdersByPriority):
+    def get(self):
+        return super().get('low')
+    
 class ViewAllOrders(Resource):
     def get(self):
         orders = Orders.query.all()
